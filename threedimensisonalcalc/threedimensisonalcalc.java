@@ -1,37 +1,23 @@
-import java.math.*;
-public class threedimensisonalcalc{
-    static void calc(){
+public class ThreeDimensisonalCalc{
+    static void calc(double x, double y, double z, double x2, double y2, double z2){
+        double unSquaredAnswer;
+        double Result;
+        double x3 = Math.pow(x2 - x, 2);
+        double y3 = Math.pow(y2 - y, 2);
+        double z3 = Math.pow(z2 - z, 2);
+
+        unSquaredAnswer = x3 + y3 + z3;
+        Result = Math.sqrt(unSquaredAnswer);
+        System.out.println(Result);
+
+    }
+    public static void main(String[] args){
         double x = 8d;
         double y = 12d;
         double z = 30d;
         double x2 = 19d;
         double y2 = 22d;
         double z2 = 40d;
-        double x3;
-        double y3;
-        double z3;
-        double unSquaredAnswer;
-        double Result;
-        
-        x3 = x2 - x;
-        y3 = y2 - y;
-        z3 = z2 - z;
-
-        x3 = Math.sqrt(((Math.pow(x3, 2))));
-        y3 = Math.sqrt(((Math.pow(y3, 2))));
-        z3 = Math.sqrt(((Math.pow(z3, 2))));
-        
-        x3 = Math.pow(x3, 2);
-        y3 = Math.pow(y3 ,2);
-        z3 = Math.pow(z3 ,2);
-        
-
-        unSquaredAnswer= x3 + y3 + z3;
-        Result = Math.sqrt(unSquaredAnswer);
-        System.out.println(Result);
-        
-    }
-    public static void main(String[] args){
-        calc();
+        calc(x, y, z, x2, y2, z2);
     }
 }
